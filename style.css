@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f1ea;
+    color: #333;
+}
+
+.hero {
+    background-image: url('images/silmaci.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.overlay h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: fadeDown 1s ease;
+}
+
+.overlay p {
+    font-size: 22px;
+    max-width: 700px;
+    margin-bottom: 30px;
+    animation: fadeUp 1s ease;
+}
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd27f;
+}
+
+section {
+    padding: 70px;
+    line-height: 1.8;
+}
+
+h2 {
+    color: #7a5c3e;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #7a5c3e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+html {
+    scroll-behavior: smooth;
+}
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+.quiz {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.quiz button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7a5c3e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz button:hover {
+    background-color: #5a422c;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #7a5c3e;
+}

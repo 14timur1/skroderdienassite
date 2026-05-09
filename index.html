@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skroderdienas Silmačos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+    <div class="overlay">
+        <h1>Skroderdienas Silmačos</h1>
+
+        <p>
+            Rūdolfa Blaumaņa slavenā luga par Jāņu svinēšanu,
+            mīlestību un jautriem pārpratumiem.
+        </p>
+
+        <nav>
+            <a href="#sakums">Sākums</a>
+            <a href="#autors">Autors</a>
+            <a href="#sizets">Sižets</a>
+            <a href="#varoni">Varoņi</a>
+            <a href="#viedoklis">Viedoklis</a>
+        </nav>
+    </div>
+</header>
+
+    <section id="sakums">
+        <h2>Sākums</h2>
+
+        <p>
+            “Skroderdienas Silmačos” ir populāra Rūdolfa Blaumaņa luga.
+        </p>
+    </section>
+
+    <section id="autors">
+        <h2>Autors</h2>
+
+        <p>
+            Rūdolfs Blaumanis bija slavens latviešu rakstnieks un dramaturgs.
+        </p>
+    </section>
+
+    <section id="sizets">
+        <h2>Sižets</h2>
+
+        <p>
+            Darbā tiek attēlota gatavošanās Jāņu svinēšanai Silmaču mājās.
+        </p>
+    </section>
+
+    <section id="varoni">
+        <h2>Galvenie varoņi</h2>
+
+        <ul>
+            <li>Antonija</li>
+            <li>Dūdars</li>
+            <li>Aleksis</li>
+            <li>Elīna</li>
+        </ul>
+    </section>
+
+    <section id="viedoklis">
+        <h2>Mans viedoklis</h2>
+
+        <p>
+            Man patika šis darbs, jo tas bija interesants un smieklīgs.
+        </p>
+    </section>
+<section id="tests">
+    <h2>Kāds tu esi no “Skroderdienas Silmačos”?</h2>
+
+    <p>Atbildi uz jautājumiem un noskaidro savu rezultātu 👇</p>
+
+    <div class="quiz">
+
+        <h3>1. Kā tu rīkojies problēmu situācijā?</h3>
+        <button onclick="answer('antonija')">Rīkojos emocionāli</button>
+        <button onclick="answer('dudars')">Jokoju un smejos</button>
+        <button onclick="answer('aleksis')">Domāju mierīgi</button>
+
+        <h3>2. Kāds ir tavs raksturs?</h3>
+        <button onclick="answer('antonija')">Spēcīgs un jūtīgs</button>
+        <button onclick="answer('dudars')">Jautrs un aktīvs</button>
+        button onclick="answer('aleksis')">Kluss un mierīgs</button>
+
+    </div>
+
+    <h3 id="result"></h3>
+</section>
+    <footer>
+        <p>2026 © Projekta darbs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
