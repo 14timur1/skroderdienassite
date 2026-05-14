@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Viedoklis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,900&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+    --bg-color: #0d0d0d;
+    --text-primary: #e2e2e2;
+    --text-secondary: #a0a0a0;
+    --accent: #c5a059;
+    --line: rgba(255, 255, 255, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Lora', serif; 
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGĀCIJA --- */
+nav { 
+    padding: 1.5rem 10%;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(13, 13, 13, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a { 
+    color: var(--text-secondary); 
+    text-decoration: none; 
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    position: relative;
+}
+
+nav a:hover { color: var(--accent); }
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 1px;
+    bottom: -5px; left: 0;
+    background: var(--accent);
+    transition: 0.4s;
+}
+nav a:hover::after { width: 100%; }
+
+/* --- HEADER --- */
+header { 
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(to bottom, rgba(13,13,13,0.5), #0d0d0d),
+                url('https://images.unsplash.com/photo-1518914781460-a3adb461df90?q=80&w=2070') center/cover;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 0.9;
+    animation: slideIn 1.2s ease-out;
+}
+
+header p {
+    color: var(--accent);
+    font-style: italic;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* --- SATURS UN ATTĒLI --- */
+.container { 
+    max-width: 800px; 
+    margin: 80px auto; 
+    padding: 0 20px;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px;
+    margin: 50px 0;
+    overflow: hidden;
+    clip-path: inset(0 100% 0 0);
+    animation: reveal 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards 0.5s;
+}
+
+.image-container img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: 1.5s ease;
+}
+
+.image-container:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.hero, .quote {
+    margin: 50px 0;
+    padding-left: 30px;
+    border-left: 1px solid var(--accent);
+}
+
+.quote { font-size: 1.8rem; font-style: italic; color: #fff; }
+
+/* --- ANIMĀCIJAS --- */
+@keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes reveal { to { clip-path: inset(0 0 0 0); } }
+
+footer { padding: 60px; text-align: center; border-top: 1px solid var(--line); color: var(--text-secondary); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <header><h1>Personīgais viedoklis</h1></header>
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="autors.html">Par autoru</a>
+        <a href="sizets.html">Sižets</a>
+        <a href="varoni.html">Varoņi</a>
+        <a href="viedoklis.html">Viedoklis</a>
+    </nav>
+    <div class="container">
+        <h2>Mana atziņa</h2>
+        <p>Noveles "Nāves ēnā" lasīšana liek aizdomāties par to, kas mēs esam kritiskos brīžos. Blaumanis parāda, ka pat nāves priekšā cilvēks var saglabāt pašcieņu un mīlestību pret citiem.</p>
+        
+        <div class="quote">
+            "Kad jūra briesmās, tad cilvēks ir viens ar savu sirdi."
+        </div>
+        
+        <h3>Kāpēc šis darbs ir aktuāls šodien?</h3>
+        <p>Tas māca mums par empātiju un to, ka materiālajām vērtībām nav nozīmes, kad runa ir par dzīvību un cilvēcību.</p>
+    </div>
+</body>
+</html>
